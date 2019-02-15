@@ -1,0 +1,74 @@
+{
+  "name": "skeleton-typescript-module",
+  "version": "1.0.0",
+  "description": "TS-Module w/ Declarations, WebPack, and Opinions. | TGRstack",
+  "main": "dist/index.js",
+  "typings": "./dist/index",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.2.2",
+    "@babel/preset-env": "7.3.1",
+    "@tgrx/tslint-config-tgr": "5.0.0",
+    "@trust/webcrypto": "0.9.2",
+    "@types/enzyme": "3.1.16",
+    "@types/jest": "24.0.0",
+    "autostrip-json-comments": "0.0.4",
+    "babel-loader": "8.0.4",
+    "chokidar": "2.0.4",
+    "chokidar-cli": "1.2.1",
+    "commitizen": "3.0.5",
+    "copy-webpack-plugin": "4.6.0",
+    "cz-emoji": "1.1.2",
+    "dotenv-webpack": "1.7.0",
+    "enzyme": "3.8.0",
+    "file-loader": "3.0.1",
+    "jest": "24.1.0",
+    "nps": "5.9.3",
+    "nps-utils": "1.7.0",
+    "sass-loader": "7.1.0",
+    "standard-version": "4.4.0",
+    "style-loader": "0.23.0",
+    "terser-webpack-plugin": "1.2.2",
+    "ts-jest": "23.10.5",
+    "ts-loader": "5.3.3",
+    "ts-loader-decleration": "0.10.4",
+    "ts-node": "8.0.2",
+    "tsconfig-paths": "3.7.0",
+    "tsconfig-paths-jest": "0.0.1",
+    "tsconfig-paths-webpack-plugin": "3.2.0",
+    "tslint": "5.12.1",
+    "typescript": "3.3.1",
+    "webpack": "4.29.1",
+    "webpack-cli": "3.2.3",
+    "webpack-merge": "4.2.1",
+    "webpack-node-externals": "1.7.2"
+  },
+  "scripts": {
+    "start": "nps",
+    "test": "nps test"
+  },
+  "config": {
+    "cz-emoji": {
+      "scopes": [
+        "$build",
+        "$docs",
+        "$src"
+      ]
+    },
+    "commitizen": {
+      "path": "./node_modules/cz-emoji"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TGRstack/typescript-module.git"
+  },
+  "keywords": [],
+  "author": "Florian Mettetal <florian.mettetal@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TGRstack/typescript-module/issues"
+  },
+  "homepage": "https://github.com/TGRstack/typescript-module#readme"
+}
