@@ -10,7 +10,7 @@ const filePaths = [
 ].join(' ')
 
 module.exports = {
-  default: 'jest',
+  default: 'jest --passWithNoTests',
   update: 'jest -u',
   watch: 'chokidar '+filePaths+' -c \"nps test\" --initial --verbose',
 }
