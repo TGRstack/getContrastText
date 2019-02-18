@@ -1,7 +1,7 @@
 {
-  "name": "@tgrx/mui-getContrastText",
+  "name": "@tgrx/getcontrasttext",
   "version": "1.0.0",
-  "description": "TS-Module w/ Declarations, WebPack, and Opinions. | TGRstack",
+  "description": "MUI's getContrastText and helpers | TGRstack",
   "main": "dist/index.js",
   "typings": "./dist/index.d.ts",
   "dependencies": {
@@ -70,7 +70,7 @@
   "author": "Florian Mettetal <florian.mettetal@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TGRstack/typescript-module/issues"
+    "url": "https://github.com/TGRstack/getContrastText/issues"
   },
   "homepage": "https://github.com/TGRstack/typescript-module#readme"
 }
