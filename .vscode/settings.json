@@ -1,4 +1,8 @@
 {
+  // # per window zoom level
+  "window.zoomLevel": 0,
+
+  // # TGRSTACK
   "files.exclude": {
     // DOT FILES
     ".babelrc": true,
