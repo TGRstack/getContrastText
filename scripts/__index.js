@@ -19,7 +19,7 @@ const git = {
 
 const publish = {
   default: series.nps('publish.npm', 'publish.git'),
-  npm: 'npm publish --tag next',
+  npm: 'npm publish',
   git: git.tags.push,
 }
 

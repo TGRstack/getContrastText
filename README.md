@@ -40,7 +40,7 @@ import red from '@material-ui/core/colors/red'
 import teal from '@material-ui/core/colors/teal'
 
 // HELPERS
-import getContrastText from '@tgrx/mui-getContrastText'
+import getContrastText from '@tgrx/getcontrasttext'
 import { isProd } from '_config/index'
 
 // SETTINGS
