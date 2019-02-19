@@ -3,20 +3,17 @@
 // REF: https://github.com/mui-org/material-ui/blob/ec37e2bb3c904d9552fa819425ee1eef72914996/packages/material-ui/src/styles/createPalette.js#L104
 
 import * as warning from 'warning';
+import {light, dark} from './palette'
 
 let logWarnings = true
 
 export default function getContrastText({
   background,
   contrastThreshold,
-  dark,
-  light,
   warnings = true
 }: {
   background: string,
   contrastThreshold: number,
-  dark: {text: {primary: string}},
-  light: {text: {primary: string}},
   warnings?: boolean
 }) {
   logWarnings = warnings
