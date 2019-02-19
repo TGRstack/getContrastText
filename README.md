@@ -47,22 +47,38 @@ import { isProd } from '_config/index'
 
 // tslint:disable object-literal-sort-keys
 const palette = {
-  type: ('dark' as PaletteType),
-  primary: indigo,
-  secondary: teal,
-  error: red,
-  background: '#000',
-  surface: '#111'
+  type:       ('light' as PaletteType),
+  primary:    indigo,
+  secondary:  teal,
+  error:      red,
+  background: '#EFF3FA',  // MUI.io: surface-dark
+  surface:    '#F9FDFF',  // MUI.io: surface-main
 }
+const primary = {
+  light:  palette.primary[100],
+  main:   palette.primary[300],
+  dark:   palette.primary[600],
+}
+const secondary = {
+  light:  palette.secondary[600],
+  main:   palette.secondary[800],
+  dark:   palette.secondary[900],
+}
+const error = {
+  light:  palette.error[300],
+  main:   palette.error[700], // no "main vs dark" yet
+  dark:   palette.error[700],
+}
+
 // tslint:enable object-literal-sort-keys
 
-// Used by `getContrastText()` to maximize the contrast
-//    between the background and the text.
+// Used by `getContrastText()` to maximize the contrast between the background and
+// the text.
 const contrastThreshold = 3
 
 // Used to shift a color's luminance by approximately
-//   two indexes within its tonal palette.
-//   E.g., shift from Red 500 to Red 300 or Red 700.
+// two indexes within its tonal palette.
+// E.g., shift from Red 500 to Red 300 or Red 700.
 const tonalOffset = 0.2
 
 const spacing = (4 as SpacingOptions)
@@ -74,44 +90,38 @@ export default {
   palette: {
     type: palette.type,
     primary: {
-      light: palette.primary[300],
-      main: palette.primary[500],
-      dark: palette.primary[700],
-      contrastText: getContrastText({  // example of import getContrastText()
-        background: palette.primary[500],
-        light: {text: {primary: palette.primary[300]}},
-        dark: {text: {primary: palette.primary[700]}},
+      light: primary.light,
+      main: primary.main,
+      dark: primary.dark,
+      contrastText: getContrastText({
+        background: primary.dark,
         contrastThreshold,
         warnings,
       }),
     },
     secondary: {
-      light: palette.secondary.A200,
-      main: palette.secondary.A400,
-      dark: palette.secondary.A700,
-      contrastText: getContrastText({  // example of import getContrastText()
-        background: palette.secondary[500],
-        light: {text: {primary: palette.secondary[300]}},
-        dark: {text: {primary: palette.secondary[700]}},
+      light: secondary.light,
+      main: secondary.main,
+      dark: secondary.dark,
+      contrastText: getContrastText({
+        background: secondary.main,
         contrastThreshold,
         warnings,
       }),
     },
     error: {
-      light: palette.error[300],
-      main: palette.error[500],
-      dark: palette.error[700],
-      contrastText: getContrastText({  // example of import getContrastText()
-        background: palette.error[500],
-        light: {text: {primary: palette.error[300]}},
-        dark: {text: {primary: palette.error[700]}},
+      light: error.light,
+      main: error.main,
+      dark: error.dark,
+      contrastText: getContrastText({
+        background: error.main,
         contrastThreshold,
         warnings,
       }),
     },
     background: {
-      default: palette.background, // inDesign: surface-dark
-      paper:   palette.surface,    // inDesign: surface-main
+      default: palette.background, // MUI.io: surface-dark
+      paper:   palette.surface,    // MUI.io: surface-main
     },
     contrastThreshold,
     tonalOffset,
@@ -141,16 +151,12 @@ import getContrastText, {
 getContrastText({
   background,
   contrastThreshold,
-  dark,
-  light,
   warnings = true
 }: {
   background: string,
   contrastThreshold: number,
-  dark: {text: {primary: string}},
-  light: {text: {primary: string}},
   warnings?: boolean
-}) 
+})
 ```
 
 - decomposeColor()

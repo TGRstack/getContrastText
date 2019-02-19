@@ -64,7 +64,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TGRstack/typescript-module.git"
+    "url": "git+https://github.com/TGRstack/getContrastText.git"
   },
   "keywords": [],
   "author": "Florian Mettetal <florian.mettetal@gmail.com>",
@@ -72,5 +72,5 @@
   "bugs": {
     "url": "https://github.com/TGRstack/getContrastText/issues"
   },
-  "homepage": "https://github.com/TGRstack/typescript-module#readme"
+  "homepage": "https://github.com/TGRstack/getContrastText#readme"
 }
